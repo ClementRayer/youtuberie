@@ -1,2 +1,2 @@
 # youtuberie
-Personal project for fun
+Personal project for fun lol
