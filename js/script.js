@@ -1,3 +1,4 @@
+// Generate a random name
 getRandomIdFromArray = (arrayName) =>{
     return Math.floor(Math.random() * arrayName.length);
 }
@@ -28,9 +29,12 @@ displayName = () =>{
     nameReceptacle.innerHTML = generateName();
 };
 
+// Place the random name (onload to get it by default)
 window.onload = displayName();
 
-const button = document.getElementById('button');
+const button = document.getElementById('generating-button');
 button.addEventListener('click', () => {
     displayName();
 });
+
+window.onload = console.log(`${firstName.length} first names, ${lastName.length} last names`);
