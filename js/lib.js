@@ -134,7 +134,7 @@ const lastName = [
     {F : "réticente", M :"réticent"},
     {N : "revêche"},
     {F : "ronchonne", M :"ronchon"},
-    {F : "rugeuse", M :"rugeux"},
+    {F : "rugueuse", M :"rugueux"},
     {F : "sèche", M :"sec"},
     {F : "soucieuse", M :"soucieux"},
     {F : "scrupuleuse", M :"scrupuleux"},
