@@ -93,6 +93,7 @@ const lastName = [
     {F : "dissidente", M :"dissident"},
     {F : "désappointée", M :"désappointé"},
     {F : "dribbleuse", M :"dribbleur"},
+    {F : "échaudée", M :"échaudé"},
     {F : "échauffée", M :"échauffé"},
     {F : "éclairée", M :"éclairé"},
     {F : "émotive", M :"émotif"},

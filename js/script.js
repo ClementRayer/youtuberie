@@ -35,9 +35,38 @@ displayName = () =>{
 window.onload = displayName();
 
 // Generator trigger
-const button = document.getElementById('generating-button');
-button.addEventListener('click', () => {
+const generatingButton = document.getElementById('generating-button');
+generatingButton.addEventListener('click', () => {
     displayName();
+});
+
+// Copy the generated name
+copyToClipboard = () => {
+    let textToCopy = document.getElementById('generated-name').innerHTML;
+    navigator.clipboard.writeText(textToCopy);
+};
+
+// Trigger the name copy
+document.getElementById('copy-button').addEventListener('click', () => {
+    copyToClipboard();
+});
+
+// Displays the notification when a name is copied
+let copyConfirmationContainer = document.getElementById('copy-button-message');
+
+displayCopyConfirmation = () => { 
+    let nameToDisplay = document.getElementById('generated-name').innerHTML;
+    copyConfirmationContainer.innerHTML = `"${nameToDisplay}" a bien été collé`;
+    copyConfirmationContainer.style.opacity = '0.9';
+};
+
+eraseCopyConfirmation = () =>{
+    copyConfirmationContainer.style.opacity = '0';
+}
+
+document.getElementById('copy-button').addEventListener('click',() => {
+    displayCopyConfirmation();
+    setTimeout(() => { eraseCopyConfirmation(); }, 2000);
 });
 
 // Count and display possibilities
