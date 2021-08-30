@@ -159,6 +159,9 @@ h1{
     .content{
         margin-top: 15vh;
     }
+    #generated-name{
+        font-size: 3.5rem;
+    }
     .footer-content{
         padding-bottom: 0;
     }
@@ -167,9 +170,19 @@ h1{
         text-align: left;
     }
     .footer-right{
+        max-width: 45%;
         text-align: right;
     }
     #github-logo{
         margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 450px) and (max-height: 750px){
+    .content{
+        margin-top: 12vh;
+    }
+    #generated-name{
+        margin: 30px 0 40px 0;
+        font-size: 3rem;
     }
 }
