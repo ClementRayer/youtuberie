@@ -16,7 +16,7 @@ const firstName = [
     {Value : "Carotte", Gender : "F"},
     {Value : "Céleri", Gender : "M"},
     {Value : "Chimpanzé", Gender : "M"},
-    {Value : "Cochon d'inde", Gender : "F"},
+    {Value : "Cochon d'Inde", Gender : "M"},
     {Value : "Coléoptère", Gender : "M"},
     {Value : "Courgette", Gender : "F"},
     {Value : "Crapaud", Gender : "M"},

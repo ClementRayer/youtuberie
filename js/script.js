@@ -1,3 +1,11 @@
+// Close the introduction pop-in on click anywhere
+const introCloser = document.getElementById('introduction-closer');
+const introBlock = document.getElementById('introduction');
+introCloser.addEventListener('click', () =>{
+    introCloser.style.display = 'none';
+    introBlock.style.display = 'none';
+});
+
 // Functions to grab content in the library
 getRandomIdFromArray = (arrayName) =>{
     return Math.floor(Math.random() * arrayName.length);
@@ -25,7 +33,7 @@ generateName = () =>{
     return `${randomFirstName.Value} ${randomLastName}`;
 };
 
-// Place the generated name in the page
+// Place the generated name in the page, and triggers animation
 displayName = () =>{
     const nameContainer = document.getElementById('generated-name');
     nameContainer.innerHTML = generateName();
@@ -37,7 +45,11 @@ window.onload = displayName();
 // Generator trigger
 const generatingButton = document.getElementById('generating-button');
 generatingButton.addEventListener('click', () => {
-    displayName();
+    document.body.classList.add('name-transition');
+    setTimeout(() =>{
+        displayName();
+        document.body.classList.remove('name-transition');
+    }, 150)
 });
 
 // Copy the generated name
@@ -60,10 +72,12 @@ displayCopyConfirmation = () => {
     copyConfirmationContainer.style.opacity = '0.9';
 };
 
+// Stop displaying the notification after name copy
 eraseCopyConfirmation = () =>{
     copyConfirmationContainer.style.opacity = '0';
 }
 
+// Trigger copy name notification and its disappearing after 2 seconds
 document.getElementById('copy-button').addEventListener('click',() => {
     displayCopyConfirmation();
     setTimeout(() => { eraseCopyConfirmation(); }, 2000);
