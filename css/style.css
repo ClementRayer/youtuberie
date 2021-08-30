@@ -147,3 +147,29 @@ h1{
 #github-logo{
     margin-left: 20px;
 }
+@media only screen and (max-width: 450px) {
+    #introduction{
+        width: 85vw;
+        top: 10vh;
+        left: 5.5vw;
+    }
+    #intro-x-button{
+        right: 3vw;
+    }
+    .content{
+        margin-top: 15vh;
+    }
+    .footer-content{
+        padding-bottom: 0;
+    }
+    #possibilities-container{
+        max-width: 50%;
+        text-align: left;
+    }
+    .footer-right{
+        text-align: right;
+    }
+    #github-logo{
+        margin-left: 10px;
+    }
+}
