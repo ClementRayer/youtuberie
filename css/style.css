@@ -79,7 +79,7 @@ h1{
 }
 #generated-name{
     font-size: 4rem;
-    margin: 40px 0 60px 0;
+    margin: 40px 15px 60px 15px;
     opacity: 1;
     transition: opacity ease-in-out 150ms;
 }
